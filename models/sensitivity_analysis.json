@@ -1,0 +1,92 @@
+{
+  "note": "Fixed hyper-parameters; 5 repeated splits where 'runs' are mentioned.",
+  "random_vs_group_split": {
+    "random_split_5_seeds": {
+      "R2": {
+        "mean": 0.852,
+        "sd": 0.0623,
+        "min": 0.7878,
+        "max": 0.9335
+      },
+      "MAE": {
+        "mean": 4.5233,
+        "sd": 0.6272,
+        "min": 3.8687,
+        "max": 5.3604
+      },
+      "F1_Macro": {
+        "mean": 0.846,
+        "sd": 0.0302,
+        "min": 0.8026,
+        "max": 0.8765
+      },
+      "Accuracy": {
+        "mean": 0.8517,
+        "sd": 0.0301,
+        "min": 0.8086,
+        "max": 0.8804
+      },
+      "n_runs": 5
+    },
+    "group_split_5_seeds": {
+      "R2": {
+        "mean": 0.85,
+        "sd": 0.0293,
+        "min": 0.8099,
+        "max": 0.8922
+      },
+      "MAE": {
+        "mean": 4.3281,
+        "sd": 0.2461,
+        "min": 4.0402,
+        "max": 4.7226
+      },
+      "F1_Macro": {
+        "mean": 0.8406,
+        "sd": 0.0328,
+        "min": 0.8046,
+        "max": 0.885
+      },
+      "Accuracy": {
+        "mean": 0.8478,
+        "sd": 0.0311,
+        "min": 0.8125,
+        "max": 0.8905
+      },
+      "n_runs": 5
+    }
+  },
+  "random_split_test_rows_with_same_student_in_train_pct": 55.5,
+  "g3_zero_records": {
+    "n_total": 53,
+    "n_with_zero_absences": 53,
+    "pct_zero_g3_among_zero_absence_students": 14.8,
+    "pct_zero_g3_among_students_with_absences": 0.0,
+    "corr_absences_G3_all": -0.042,
+    "corr_absences_G3_excluding_zero_G3": -0.234,
+    "metrics_all_rows": {
+      "R2": 0.805573667510906,
+      "MAE": 4.629975597302964,
+      "F1_Macro": 0.8967315798707426,
+      "Accuracy": 0.8990384615384616
+    },
+    "metrics_train_and_test_without_G3_zero": {
+      "R2": 0.883247933143428,
+      "MAE": 3.343557303116468,
+      "F1_Macro": 0.9017250376399755,
+      "Accuracy": 0.9054726368159204
+    }
+  },
+  "without_G1_G2_trend": {
+    "R2": 0.2066633114611397,
+    "MAE": 11.693134297255902,
+    "F1_Macro": 0.5305072675942294,
+    "Accuracy": 0.5961538461538461
+  },
+  "with_all_features_reference": {
+    "R2": 0.805573667510906,
+    "MAE": 4.629975597302964,
+    "F1_Macro": 0.8967315798707426,
+    "Accuracy": 0.8990384615384616
+  }
+}

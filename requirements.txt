@@ -1,0 +1,17 @@
+# Direct dependencies.
+# Verified on Python 3.12 (Linux) in two environments:
+#   (a) latest releases (see docs/TEST_RESULTS.md), and
+#   (b) the lower bounds below: pandas 2.2.3, numpy 2.0.2, scikit-learn 1.6.1, xgboost 2.1.4,
+#       shap 0.46.0, streamlit 1.50.0, plotly 5.20.0, matplotlib 3.8.4, seaborn 0.13.2, pytest 8.0.2.
+# xgboost < 2.1.4 crashes with scikit-learn 1.6; numpy < 2 is incompatible with current pyarrow (used by Streamlit).
+pandas>=2.2
+numpy>=2.0
+scikit-learn>=1.6
+xgboost>=2.1.4
+shap>=0.46
+joblib>=1.3
+matplotlib>=3.8
+seaborn>=0.13
+plotly>=5.20
+streamlit>=1.50
+pytest>=8.0

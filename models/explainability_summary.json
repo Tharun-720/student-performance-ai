@@ -1,0 +1,293 @@
+{
+  "model": "Gradient Boosting (Tuned)",
+  "n_rows_explained": 208,
+  "method_notes": {
+    "tree_importance": "feature_importances_ of the fitted model (training-time impurity reduction)",
+    "permutation_importance": "mean drop in TEST R2 over 10 shuffles",
+    "shap": "shap.TreeExplainer (tree_path_dependent); values in points of predicted score (0-100)"
+  },
+  "global_tree_importance": {
+    "G2": 0.848,
+    "absences": 0.043,
+    "G1": 0.0352,
+    "estimated_attendance_pct": 0.0327,
+    "subject_Portuguese": 0.0053,
+    "engagement_consistency": 0.0048,
+    "subject_Mathematics": 0.0044,
+    "age": 0.0037,
+    "romantic_no": 0.0032,
+    "failures": 0.0024,
+    "famrel": 0.0023,
+    "traveltime": 0.0015,
+    "health": 0.0014,
+    "romantic_yes": 0.0011,
+    "study_to_social_ratio": 0.0011
+  },
+  "global_permutation_importance": {
+    "G2": 1.1136,
+    "G1": 0.0154,
+    "absences": 0.0141,
+    "estimated_attendance_pct": 0.0056,
+    "subject_Mathematics": 0.0044,
+    "engagement_consistency": 0.0042,
+    "subject_Portuguese": 0.0037,
+    "age": 0.0016,
+    "famrel": 0.0011,
+    "goout": 0.0005,
+    "sex_F": 0.0004,
+    "freetime": 0.0002,
+    "higher_yes": 0.0002,
+    "sex_M": 0.0002,
+    "Medu": 0.0001
+  },
+  "permutation_baseline_r2": 0.795,
+  "shap_available": true,
+  "base_value": 56.699,
+  "base_value_definition": "mean model prediction over the training data (TreeExplainer expected_value)",
+  "additivity_max_gap_points": 0.0,
+  "additivity_within_tolerance": true,
+  "global_shap_importance": [
+    {
+      "feature": "G2",
+      "mean_abs_shap": 11.252
+    },
+    {
+      "feature": "G1",
+      "mean_abs_shap": 1.825
+    },
+    {
+      "feature": "absences",
+      "mean_abs_shap": 1.106
+    },
+    {
+      "feature": "estimated_attendance_pct",
+      "mean_abs_shap": 0.859
+    },
+    {
+      "feature": "subject_Mathematics",
+      "mean_abs_shap": 0.457
+    },
+    {
+      "feature": "subject_Portuguese",
+      "mean_abs_shap": 0.443
+    },
+    {
+      "feature": "failures",
+      "mean_abs_shap": 0.205
+    },
+    {
+      "feature": "engagement_consistency",
+      "mean_abs_shap": 0.186
+    },
+    {
+      "feature": "romantic_no",
+      "mean_abs_shap": 0.15
+    },
+    {
+      "feature": "famrel",
+      "mean_abs_shap": 0.134
+    },
+    {
+      "feature": "past_failure_flag",
+      "mean_abs_shap": 0.114
+    },
+    {
+      "feature": "age",
+      "mean_abs_shap": 0.101
+    },
+    {
+      "feature": "traveltime",
+      "mean_abs_shap": 0.092
+    },
+    {
+      "feature": "romantic_yes",
+      "mean_abs_shap": 0.083
+    },
+    {
+      "feature": "study_to_social_ratio",
+      "mean_abs_shap": 0.078
+    }
+  ],
+  "case_studies": [
+    {
+      "title": "Lowest actual score among High Support",
+      "selection": "min actual score within tier",
+      "test_row_index": 42,
+      "subject": "Mathematics",
+      "G1": 6.0,
+      "G2": 0.0,
+      "absences": 0.0,
+      "failures": 0,
+      "studytime": 1,
+      "actual_score_pct": 0.0,
+      "predicted_score_pct": 5.0,
+      "actual_tier": "High Support",
+      "base_value": 56.699,
+      "increasing_features": [
+        {
+          "feature": "romantic_no",
+          "shap": 0.475
+        },
+        {
+          "feature": "age",
+          "shap": 0.468
+        },
+        {
+          "feature": "famrel",
+          "shap": 0.429
+        },
+        {
+          "feature": "romantic_yes",
+          "shap": 0.185
+        },
+        {
+          "feature": "goout",
+          "shap": 0.134
+        }
+      ],
+      "decreasing_features": [
+        {
+          "feature": "G2",
+          "shap": -38.87
+        },
+        {
+          "feature": "G1",
+          "shap": -4.652
+        },
+        {
+          "feature": "absences",
+          "shap": -4.401
+        },
+        {
+          "feature": "estimated_attendance_pct",
+          "shap": -3.358
+        },
+        {
+          "feature": "subject_Mathematics",
+          "shap": -0.875
+        }
+      ],
+      "note": "Actual final grade is 0; the dataset cannot tell whether the student failed the exam or did not sit it."
+    },
+    {
+      "title": "Typical Medium Support student",
+      "selection": "median actual score within tier",
+      "test_row_index": 52,
+      "subject": "Mathematics",
+      "G1": 12.0,
+      "G2": 11.0,
+      "absences": 11.0,
+      "failures": 0,
+      "studytime": 2,
+      "actual_score_pct": 55.0,
+      "predicted_score_pct": 55.0,
+      "actual_tier": "Medium Support",
+      "base_value": 56.699,
+      "increasing_features": [
+        {
+          "feature": "G1",
+          "shap": 1.031
+        },
+        {
+          "feature": "absences",
+          "shap": 0.63
+        },
+        {
+          "feature": "estimated_attendance_pct",
+          "shap": 0.422
+        },
+        {
+          "feature": "failures",
+          "shap": 0.089
+        },
+        {
+          "feature": "engagement_consistency",
+          "shap": 0.067
+        }
+      ],
+      "decreasing_features": [
+        {
+          "feature": "G2",
+          "shap": -2.27
+        },
+        {
+          "feature": "subject_Portuguese",
+          "shap": -0.681
+        },
+        {
+          "feature": "subject_Mathematics",
+          "shap": -0.673
+        },
+        {
+          "feature": "famrel",
+          "shap": -0.12
+        },
+        {
+          "feature": "paid_no",
+          "shap": -0.109
+        }
+      ],
+      "note": ""
+    },
+    {
+      "title": "Highest actual score among Low Support",
+      "selection": "max actual score within tier",
+      "test_row_index": 50,
+      "subject": "Mathematics",
+      "G1": 18.0,
+      "G2": 18.0,
+      "absences": 5.0,
+      "failures": 0,
+      "studytime": 3,
+      "actual_score_pct": 95.0,
+      "predicted_score_pct": 87.3,
+      "actual_tier": "Low Support",
+      "base_value": 56.699,
+      "increasing_features": [
+        {
+          "feature": "G2",
+          "shap": 27.511
+        },
+        {
+          "feature": "G1",
+          "shap": 3.222
+        },
+        {
+          "feature": "absences",
+          "shap": 0.551
+        },
+        {
+          "feature": "estimated_attendance_pct",
+          "shap": 0.446
+        },
+        {
+          "feature": "failures",
+          "shap": 0.07
+        }
+      ],
+      "decreasing_features": [
+        {
+          "feature": "subject_Portuguese",
+          "shap": -0.394
+        },
+        {
+          "feature": "subject_Mathematics",
+          "shap": -0.374
+        },
+        {
+          "feature": "paid_no",
+          "shap": -0.159
+        },
+        {
+          "feature": "Mjob_at_home",
+          "shap": -0.152
+        },
+        {
+          "feature": "famrel",
+          "shap": -0.124
+        }
+      ],
+      "note": ""
+    }
+  ]
+}
