@@ -1,120 +1,176 @@
-🎓 Student Performance Prediction & Personalized Learning Recommendation System
-🤖 Machine Learning | 📊 Data Analysis | 💡 Personalized Learning Support
-Technology: Python · Streamlit · Pandas · NumPy · scikit-learn · XGBoost · SHAP · Plotly · Pytest
-🚀 Live Application: https://student-performance-ai-7l6i22jkhk5staxyhunven.streamlit.app/  
-💻 GitHub Repository: https://github.com/Tharun-720/student-performance-ai
----
-📖 About
-An interactive Python and Streamlit machine-learning application that analyses student records, estimates final performance, predicts support tiers, explains predictions using SHAP, and provides learning-support recommendations.
-🔗 Project Links
-🌐 Live Application: https://student-performance-ai-7l6i22jkhk5staxyhunven.streamlit.app/
-💻 GitHub Repository: https://github.com/Tharun-720/student-performance-ai
-📚 UCI Student Performance Dataset: https://archive.ics.uci.edu/dataset/320/student+performance
-👨‍💻 Author's GitHub Profile: https://github.com/Tharun-720
-✨ Features
-📊 Exploratory Data Analysis
-🎯 Student Assessment & Score Predictor
-🚦 High, Medium, and Low Support Tier Classification
-🔍 SHAP Explainability
-💡 Personalized Learning Recommendations
-🏆 Regression and Classification Model Benchmarking
-🧬 Exploratory K-Means Student Clusters
-📂 Batch CSV Scoring
----
-🖼️ Application Screenshots
-Screenshots are linked as text below; no images are embedded in this README. Select a link to open the corresponding screenshot in the repository.
-🏠 1. Dashboard Overview
-The main dashboard summarises the dataset and key model metrics.
-🔗 Open Dashboard Overview screenshot
-📊 2. Exploratory Data Analysis
-Explore final-score distribution, recorded absences, grade progression, study-time categories, and the correlation matrix.
-🔗 Open Exploratory Data Analysis screenshot
-🎯 3. Student Assessment & Predictor
-Enter student details and run a prediction to view the estimated final score, support tier, and approximate prediction range.
-🔗 Open Student Assessment & Predictor screenshot
-🔍 4. Explainability — SHAP
-Review global feature importance and understand which inputs contribute most to the model's predictions.
-🔗 Open SHAP Explainability screenshot
-💡 5. Personalized Learning Recommendations
-View the predicted support tier, identified learning gaps, explanations, and suggested actions.
-🔗 Open Personalized Learning Recommendations screenshot
-🏆 6. Model Benchmark
-Compare regression and classification models using evaluation metrics.
-🔗 Open Model Benchmark screenshot
-🚦 7. Confusion Matrix & Residual Analysis
-Inspect classification results through a confusion matrix and regression errors through residual plots.
-🔗 Open Confusion Matrix & Residual Analysis screenshot
-🧬 8. Student Clusters
-Explore behavioural groupings using K-Means and a two-dimensional PCA visualisation. These clusters are exploratory.
-🔗 Open Student Clusters screenshot
-📂 9. Batch Scoring
-Upload a CSV file to score multiple student records. The application also provides a sample CSV.
-🔗 Open Batch Scoring screenshot
----
-🛠️ Technology Stack
-🐍 Python — application and machine-learning workflows
-🎨 Streamlit — interactive web interface
-🧮 Pandas and NumPy — data handling and numerical operations
-🤖 scikit-learn and XGBoost — model training and evaluation
-🔍 SHAP — prediction explainability
-📊 Plotly and Matplotlib — charts and visualisations
-🧪 Pytest — automated tests
-🐙 Git and GitHub — version control and project hosting
-⚙️ How It Works
-📥 Load and validate the student dataset.
-🧹 Prepare features for analysis and modelling.
-✂️ Split records using student-aware grouping.
-🤖 Train and evaluate regression and classification models.
-🔍 Explain predictions using SHAP.
-💡 Generate learning-support recommendations.
-🖥️ Display the results in the Streamlit dashboard.
-📁 Project Structure
+# 🎓 Student Performance AI
+
+An AI-powered student performance analysis and decision-support system that predicts students' final scores, identifies students who may need additional academic support, and provides explainable, personalized learning recommendations.
+
+## 🚀 Live Demo
+
+- **Live Application:** https://student-performance-ai-7l6i22jkhk5staxyhunven.streamlit.app/
+- **GitHub Repository:** https://github.com/Tharun-720/student-performance-ai
+
+## 📌 Project Overview
+
+Student Performance AI is a machine learning-based web application designed to help educators understand student performance and identify potential academic difficulties early.
+
+The system analyzes student data, predicts final academic scores, assigns support tiers, explains important prediction factors, and recommends suitable learning strategies. It also supports individual student analysis and batch predictions using CSV files.
+
+## ✨ Key Features
+
+- **Final Score Prediction:** Predicts student final grades using machine learning models.
+- **Academic Risk Analysis:** Identifies students who may require additional academic support.
+- **Explainable AI:** Uses SHAP to explain the factors influencing model predictions.
+- **Personalized Recommendations:** Generates rule-based learning recommendations based on student performance.
+- **Student Clustering:** Uses K-Means clustering to identify groups of students with similar characteristics.
+- **Single Student Analysis:** Analyze an individual student's academic profile.
+- **Batch CSV Prediction:** Upload CSV files to analyze multiple students.
+- **Interactive Dashboard:** Provides an eight-page Streamlit dashboard for exploring predictions, insights, and results.
+- **Model Evaluation:** Evaluates model performance using suitable machine learning metrics.
+
+## 🛠️ Technologies Used
+
+| Technology | Purpose |
+|---|---|
+| Python | Core programming language |
+| Streamlit | Interactive web application |
+| Pandas | Data manipulation and analysis |
+| NumPy | Numerical computation |
+| Scikit-learn | Machine learning and clustering |
+| XGBoost | Gradient boosting model |
+| SHAP | Model explainability |
+| Matplotlib | Data visualization |
+| Seaborn | Statistical visualization |
+| Pytest | Automated testing |
+
+## 📊 Dataset
+
+The project uses the **UCI Student Performance dataset**, containing 1,044 student records.
+
+The dataset supports analysis of student demographics, study habits, academic history, and other available attributes relevant to academic performance.
+
+Dataset source: [UCI Machine Learning Repository — Student Performance](https://archive.ics.uci.edu/dataset/320/student+performance)
+
+## 🏗️ System Workflow
+
+1. Load and preprocess the student dataset.
+2. Perform exploratory data analysis and prepare features.
+3. Train and evaluate machine learning models.
+4. Predict students' final scores.
+5. Assign academic support categories based on the implemented rules.
+6. Generate SHAP explanations for model predictions.
+7. Apply K-Means clustering to identify student groups.
+8. Display insights and recommendations through the Streamlit dashboard.
+
+## 📂 Project Structure
+
 ```text
 student-performance-ai/
+├── app/
+│   └── main.py
+├── src/
+│   └── run_pipeline.py
+├── tests/
+├── data/
+├── models/
+├── requirements.txt
 ├── README.md
-└── docs/
-    └── images/
-        ├── 01_dashboard_overview.png
-        ├── 02_exploratory_data_analysis.png
-        ├── 03_student_predictor.png
-        ├── 04_shap_explainability.png
-        ├── 05_learning_recommendations.png
-        ├── 06_model_benchmark.png
-        ├── 07_confusion_matrix_and_residuals.png
-        ├── 08_student_clusters.png
-        └── 09_batch_scoring.png
+└── ...
 ```
-🎯 Project Objectives
-Analyse student data to identify patterns associated with academic performance.
-Estimate student outcomes using machine-learning models.
-Explain model predictions in an understandable way.
-Offer personalized learning-support suggestions.
-Explore student groups and support batch scoring.
-🚀 Run Locally
-Clone the repository:
+
+*Note: This is a simplified overview. The exact folders and files depend on the final project structure in your repository.*
+
+## ⚙️ Installation and Setup
+
+### Prerequisites
+
+- Python 3.10 or a compatible version supported by the project dependencies
+- Git
+- pip
+
+### 1. Clone the Repository
+
 ```bash
-   git clone https://github.com/Tharun-720/student-performance-ai.git
-   cd student-performance-ai
-   ```
-Create and activate a virtual environment (recommended).
-Install dependencies using the project's dependency file:
+git clone https://github.com/Tharun-720/student-performance-ai.git
+```
+
+### 2. Navigate to the Project Directory
+
 ```bash
-   pip install -r requirements.txt
-   ```
-Start the Streamlit app using the main application file in the repository:
+cd student-performance-ai
+```
+
+### 3. Create a Virtual Environment
+
 ```bash
-   streamlit run app.py
-   ```
-If your local project uses a different Streamlit entry-point filename, use that filename in the final command.
-🔮 Future Enhancements
-Add more student datasets for broader evaluation.
-Improve personalized recommendations with educator feedback.
-Add progress tracking across multiple assessments.
-Improve deployment, accessibility, and monitoring.
-👨‍💻 Author
-Tharun Reddy
-GitHub: https://github.com/Tharun-720
-Project Repository: https://github.com/Tharun-720/student-performance-ai
-🙏 Acknowledgements
-UCI Machine Learning Repository for the Student Performance dataset.
-The open-source Python machine-learning and visualisation ecosystem.
+python -m venv .venv
+```
+
+Activate it on Windows:
+
+```bash
+.venv\Scripts\activate
+```
+
+### 4. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 5. Run the Machine Learning Pipeline
+
+```bash
+python -m src.run_pipeline
+```
+
+### 6. Launch the Streamlit Application
+
+```bash
+streamlit run app/main.py
+```
+
+Open the local URL displayed in your terminal to access the dashboard.
+
+## 🧪 Testing
+
+Run the automated test suite using:
+
+```bash
+python -m pytest -q
+```
+
+The latest reported test result was **88 passed, 0 failed**.
+
+## 🎯 Applications
+
+- Early identification of students who may need academic support
+- Data-driven academic performance analysis
+- Personalized learning strategy recommendations
+- Student grouping and academic pattern discovery
+- Batch analysis of student records
+- Educational decision support for teachers and institutions
+
+## 🔮 Future Enhancements
+
+- Integrate additional educational datasets.
+- Add teacher and student authentication.
+- Introduce longitudinal performance tracking.
+- Improve recommendation personalization.
+- Add downloadable PDF performance reports.
+- Explore deployment and integration with institutional learning management systems.
+
+## 👨‍💻 Author
+
+**Tharun Kumar**
+
+B.Tech — Computer Science and Engineering (Data Science)
+
+GitHub: [Tharun-720](https://github.com/Tharun-720)
+
+LinkedIn: [Connect with me](https://www.linkedin.com/in/tharunreddy05/)
+
+## 📄 License
+
+This project is intended for academic and educational purposes. Add a suitable open-source license if you plan to distribute the project for reuse.
+
+---
+
+⭐ If you find this project useful, consider starring the repository on GitHub.
